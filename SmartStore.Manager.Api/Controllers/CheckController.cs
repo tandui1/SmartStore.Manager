@@ -1,4 +1,5 @@
-﻿using SmartStore.Manager.App.SSO;
+﻿using Infrastructure.OkReponse;
+using SmartStore.Manager.App.SSO;
 using SmartStore.Manager.App.SSO.Login;
 using System;
 using System.Collections.Generic;
@@ -14,12 +15,10 @@ namespace SmartStore.Manager.Api.Controllers
     {
         [Route("login")]
         [HttpPost]
-         public LoginResult GetUserMenus(PassportLoginRequest request)
+         public IHttpActionResult GetUserMenus(LoginRequestDto request)
         {
-            request.Account = "admin";
-            request.AppKey = "openauth";
-            request.Password = "123456";
-            return SSOAuthUtil.Parse(request); 
+           var a=  SSOAuthUtil.Parse(request);
+            return new OkReponse(a);
         }
     }
 }

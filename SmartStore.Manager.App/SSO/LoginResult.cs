@@ -11,7 +11,6 @@ namespace SmartStore.Manager.App.SSO
     {
         public bool Success;
         public string ErrorMsg;
-        public string ReturnUrl;
         public string Token;
     }
     public class LoginResultResponse

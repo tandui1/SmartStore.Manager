@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="Enyim.Caching, Version=2.16.0.0, Culture=neutral, PublicKeyToken=cec98615db04012e, processorArchitecture=MSIL">
       <HintPath>..\packages\EnyimMemcached.2.16.0\lib\net35\Enyim.Caching.dll</HintPath>
     </Reference>
@@ -38,7 +41,15 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,13 +67,23 @@
     <Compile Include="Core\BaseEntitys\TreeEntity.cs" />
     <Compile Include="Core\Orderable.cs" />
     <Compile Include="Core\PagerModel\Pager.cs" />
+    <Compile Include="Engine\AutofacRequestLifetime.cs" />
+    <Compile Include="Engine\BaseTypeFinder.cs" />
+    <Compile Include="Engine\ComponentLifeStyle.cs" />
+    <Compile Include="Engine\ContainerManager.cs" />
+    <Compile Include="Engine\EngineContext.cs" />
+    <Compile Include="Engine\EngineCt.cs" />
+    <Compile Include="Engine\IDependencyRegistrar.cs" />
+    <Compile Include="Engine\ITypeFinder.cs" />
     <Compile Include="HttpHelper.cs" />
     <Compile Include="GuidConverter.cs" />
     <Compile Include="JsonHelper.cs" />
+    <Compile Include="OkReponse\OkReponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Response.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

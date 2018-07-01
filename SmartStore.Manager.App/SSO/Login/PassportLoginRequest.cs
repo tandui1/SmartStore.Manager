@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartStore.Manager.App.SSO.Login
 {
-   public class PassportLoginRequest
+   public class LoginRequestDto
     {
         /// <summary>
         /// 账户
@@ -16,11 +16,6 @@ namespace SmartStore.Manager.App.SSO.Login
         /// 密码
         /// </summary>
         public string Password { get; set; }
-        /// <summary>
-        /// Key
-        /// </summary>
-
-        public string AppKey { get; set; }
         /// <summary>
         /// 用户基本验证
         /// </summary>
@@ -37,7 +32,7 @@ namespace SmartStore.Manager.App.SSO.Login
             }
             Account = Account.Trim();
             Password = Password.Trim();
-            if (!string.IsNullOrEmpty(AppKey)) AppKey = AppKey.Trim();
+           // if (!string.IsNullOrEmpty(AppKey)) AppKey = AppKey.Trim();
         }
     }
 }

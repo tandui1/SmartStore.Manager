@@ -309,6 +309,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\SmartStore.Manager.Infrastructure.csproj">
+      <Project>{a8c9112f-aa2c-4ea8-b6c2-18d1c9c941b2}</Project>
+      <Name>SmartStore.Manager.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SmartStore.Manager.App\SmartStore.Manager.App.csproj">
       <Project>{42096ca0-8a8b-437a-9516-cc38329533ac}</Project>
       <Name>SmartStore.Manager.App</Name>
