@@ -1,0 +1,81 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Logon</title>
+    <link href="~/Content/logcomponent.css" rel="stylesheet" />
+    <link href="~/Content/lognormalize.css" rel="stylesheet" />
+    <link href="~/Content/jquery.jgrowl.min.css" rel="stylesheet" />
+    @*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/log/EasePack.min.js"></script>
+    <script src="~/Scripts/log/demo-1.js"></script>
+    <script src="~/Scripts/log/html5.js"></script>
+    <script src="~/Scripts/log/Longin.js"></script>
+    <script src="~/Scripts/log/rAF.js"></script>
+    <script src="~/Scripts/log/TweenLite.min.js"></script>*@
+    <style>
+        input::-webkit-input-placeholder {
+            color: rgba(0, 0, 0, 0.726);
+        }
+
+        input::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: rgba(0, 0, 0, 0.726);
+        }
+
+        input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: rgba(0, 0, 0, 0.726);
+        }
+
+        input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: rgba(0, 0, 0, 0.726);
+        }
+    </style>
+</head>
+<body>
+    <div class="container demo-1">
+        <div class="content">
+            <div id="large-header" class="large-header">
+                <canvas id="demo-canvas"></canvas>
+                <div class="logo_box">
+                    <h3>智能店长</h3>
+                    <form action="#" name="f" method="post">
+                        <div class="input_outer">
+                            <span class="u_user"></span>
+                            <input id="ID" name="logname" class="text" style="color: #000000 !important" type="text" placeholder="请输入账户">
+                        </div>
+                        <div class="input_outer">
+                            <span class="us_uer"></span>
+                            <input id="PASSWORD" name="logpass" class="text" style="color: #000000 !important; position:absolute; z-index:100;" value="" type="password" placeholder="请输入密码">
+                        </div>
+                        <div class="input_outer" style="width:150px;">
+                            <span class="us_uer"></span>
+                            <input id="VerifyCode" name="logpass" class="text" style="color: #000000 !important; position:absolute; z-index:100;width:100px" value="" type="text" placeholder="请输入验证码">
+                        </div>
+                        <div style="transform:translate(160px,-60px)">
+                            <img width="80px" height="30px" src="/VerifyCode/index" style="cursor:pointer" onclick='this.src="/VerifyCode/index?_dc="+(new Date()).getTime()' title="看不清？点击换一张。" />
+                        </div>
+                       
+                        <div id="LOGIN" class="mb2"><a class="act-but submit" href="javascript:;" onclick="login()" style="color: #FFFFFF">登录</a></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><!-- /container -->
+    <script src="~/Scripts/log/TweenLite.min.js"></script>
+    <script src="~/Scripts/log/EasePack.min.js"></script>
+    @*<script src="js/jquery.js"></script>*@
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/log/rAF.js"></script>
+    <script src="~/Scripts/log/demo-1.js"></script>
+    <script src="~/Scripts/vendor/jgrowl/jquery.jgrowl.min.js"></script>
+    <script src="~/Scripts/log/Longin.js"></script>
+    <div style="text-align:center;">
+    </div>
+</body>
+</html>
