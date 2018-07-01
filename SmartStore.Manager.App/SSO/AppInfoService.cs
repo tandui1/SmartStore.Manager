@@ -11,8 +11,9 @@ namespace SmartStore.Manager.App.SSO
     {
         public AppInfo Get(string appKey)
         {
+            ///
             // return "";
-            ////可以从数据库读取
+            ////可以从数据库读取  
             // return _applist.SingleOrDefault(u => u.AppKey == appKey);
             return null;
         }
