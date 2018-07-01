@@ -1,4 +1,4 @@
-﻿using SmartStore.Manager.App.Response;
+﻿
 using SmartStore.Manager.Infrastructure;
 using System;
 using System.Collections.Generic;

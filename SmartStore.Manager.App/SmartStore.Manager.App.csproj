@@ -75,6 +75,7 @@
     <Compile Include="SSO\SSOAuthAttribute.cs" />
     <Compile Include="SSO\SSOAuthUtil.cs" />
     <Compile Include="SSO\UserAuthSession.cs" />
+    <Compile Include="SSO\UserWithAccessedCtrls.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure\SmartStore.Manager.Infrastructure.csproj">

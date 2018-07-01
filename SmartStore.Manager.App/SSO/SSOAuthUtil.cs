@@ -1,4 +1,5 @@
 ﻿using Infrastructure.Cache;
+using SmartStore.Manager.App.APP.APP;
 using SmartStore.Manager.App.SSO.Login;
 using SmartStore.Manager.Domain.Service;
 using SmartStore.Manager.Dto;
@@ -20,29 +21,12 @@ namespace SmartStore.Manager.App.SSO
             {
                 model.Trim();
                 //获取应用信息
-                var appInfo = new AppInfoService().Get(model.AppKey);
-                if (appInfo == null)
+                var appInfo = (UserApp)DependencyResolver.Current.GetService(typeof(UserApp));
+                UserDto userInfo = appInfo.GetUserByName(model.Account);
+                if (userInfo == null)
                 {
                     throw new Exception("应用不存在");
                 }
-               // 获取用户信息
-                UserDto userInfo = null;
-                if (model.Account == "admin")
-                {
-                    userInfo = new UserDto
-                    {
-                        OID = Guid.Empty,  //TODO:可以根据需要调整
-                        Account = "admin",
-                        Name = "admin",
-                        Password = "123456"
-                    };
-                }
-                else
-                {
-                    var usermanager = (UserService)DependencyResolver.Current.GetService(typeof(UserService));
-                    userInfo = usermanager.GetUserByName(model.Account);
-                }
-
                 if (userInfo == null)
                 {
                     throw new Exception("用户不存在");
@@ -65,7 +49,7 @@ namespace SmartStore.Manager.App.SSO
                 new ObjCacheProvider<UserAuthSession>().Create(currentSession.Token, currentSession, DateTime.Now.AddDays(10));
 
                 result.Code = 200;
-                result.ReturnUrl = appInfo.ReturnUrl;
+              //  result.ReturnUrl = appInfo.ReturnUrl;
                 result.Success = true;
                 result.Token = currentSession.Token;
             }
