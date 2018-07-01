@@ -1275,16 +1275,6 @@
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SmartStore.Manager.Application\SmartStore.Manager.Application.csproj">
-      <Project>{43f4b94a-8ded-4496-b292-f919326c9a5b}</Project>
-      <Name>SmartStore.Manager.Application</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SmartStore.Manager.Core\SmartStore.Manager.Core.csproj">
-      <Project>{17eb81e5-9fbb-4616-8306-2a274112d942}</Project>
-      <Name>SmartStore.Manager.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

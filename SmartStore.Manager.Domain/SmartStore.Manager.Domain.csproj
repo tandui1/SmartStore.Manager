@@ -62,10 +62,6 @@
       <Project>{a8c9112f-aa2c-4ea8-b6c2-18d1c9c941b2}</Project>
       <Name>SmartStore.Manager.Infrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SmartStore.Manager.Application\SmartStore.Manager.Application.csproj">
-      <Project>{43f4b94a-8ded-4496-b292-f919326c9a5b}</Project>
-      <Name>SmartStore.Manager.Application</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SmartStore.Manager.Dto\SmartStore.Manager.Dto.csproj">
       <Project>{9d3d6633-42a0-41b1-80c0-13032cea38fa}</Project>
       <Name>SmartStore.Manager.Dto</Name>
