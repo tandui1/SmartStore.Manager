@@ -66,6 +66,7 @@ namespace SmartStore.Manager.App.SSO
 
                 result.Code = 200;
                 result.ReturnUrl = appInfo.ReturnUrl;
+                result.Success = true;
                 result.Token = currentSession.Token;
             }
             catch (Exception ex)

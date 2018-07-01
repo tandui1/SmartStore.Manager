@@ -17,7 +17,7 @@ namespace SmartStore.Manager.Api.Controllers
          public LoginResult GetUserMenus(PassportLoginRequest request)
         {
             request.Account = "admin";
-            request.AppKey = "admin";
+            request.AppKey = "openauth";
             request.Password = "123456";
             return SSOAuthUtil.Parse(request);
         }
