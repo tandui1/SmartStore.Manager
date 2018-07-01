@@ -19,7 +19,7 @@ namespace SmartStore.Manager.Api.Controllers
             request.Account = "admin";
             request.AppKey = "openauth";
             request.Password = "123456";
-            return SSOAuthUtil.Parse(request);
+            return SSOAuthUtil.Parse(request); 
         }
     }
 }
