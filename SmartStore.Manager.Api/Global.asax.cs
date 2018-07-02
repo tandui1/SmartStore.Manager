@@ -12,10 +12,10 @@ namespace SmartStore.Manager.Api
         {
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-           // EngineContext.Current.InitializeContainer();
+            EngineContext.Current.InitializeContainer();
             AutoMapperProvider.Init();
-           // IoCContainer ioc = new IoCContainer(EngineContext.Current.ContainerManager.Container);
-           // GlobalConfiguration.Configuration.DependencyResolver = ioc;
+            IoCContainer ioc = new IoCContainer(EngineContext.Current.ContainerManager.Container);
+            GlobalConfiguration.Configuration.DependencyResolver = ioc;
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

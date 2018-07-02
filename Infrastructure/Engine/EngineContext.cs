@@ -7,18 +7,28 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Engine
 {
-  public  class EngineContext<IClass, cbClass> where IClass: class where cbClass : class
+    public class EngineContext
     {
-      
+        //public  class EngineContext<IClass, cbClass> where IClass: class where cbClass : class
+        //  {
 
-        public static IClass Current()
+
+        //      public static IClass Current()
+        //      {
+        //          var container = new UnityContainer();
+        //        //  container.RegisterType<IClass, cbClass>();
+        //          container.RegisterType(typeof(IClass), typeof(cbClass));
+        //          IClass ins = container.Resolve<IClass>();
+
+        //          return ins;
+        //      }
+        //  }
+        private static EngineCt _currentIOC;
+        private static string _localeSetting;
+
+        public static EngineCt Current
         {
-            var container = new UnityContainer();
-          //  container.RegisterType<IClass, cbClass>();
-            container.RegisterType(typeof(IClass), typeof(cbClass));
-            IClass ins = container.Resolve<IClass>();
-
-            return ins;
+            get { return _currentIOC ?? (_currentIOC = new EngineCt()); }
         }
     }
 }

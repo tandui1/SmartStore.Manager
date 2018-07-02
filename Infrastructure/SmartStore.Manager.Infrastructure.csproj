@@ -70,6 +70,7 @@
     <Compile Include="Core\BaseEntitys\TreeEntity.cs" />
     <Compile Include="Core\Orderable.cs" />
     <Compile Include="Core\PagerModel\Pager.cs" />
+    <Compile Include="Engine\ApiDependencyScope.cs" />
     <Compile Include="Engine\AutofacRequestLifetime.cs" />
     <Compile Include="Engine\AutoMapperProvider.cs" />
     <Compile Include="Engine\BaseTypeFinder.cs" />

@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Infrastructure.Engine;
 using SmartStore.Manager.App.APP.APP;
+using SmartStore.Manager.App.APP.IAPP;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace SmartStore.Manager.App.AppServiceRegister
 
         public void Register(ContainerBuilder builder, ITypeFinder typeFinder)
         {
-            builder.RegisterType<UserApp>().As<UserApp>().InstancePerLifetimeScope();
+            builder.RegisterType<IUserApp>().As<UserApp>().InstancePerLifetimeScope();
          
         }
      }

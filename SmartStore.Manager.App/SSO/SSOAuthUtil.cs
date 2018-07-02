@@ -31,11 +31,12 @@ namespace SmartStore.Manager.App.SSO
             try
             {
                 model.Trim();
-                // EngineContext.Current.Resolve<IRoleService>().GetRoleByGuiD(i.User.RoleGuid).Name)
+                //EngineContext.Current.Resolve<IRoleService>().GetRoleByGuiD(i.User.RoleGuid).Name)
                 // var container = new UnityContainer();
                 //container.RegisterType<IUserApp, UserApp>();
                 //获取应用信息
-                var appInfo = EngineContext<IUserApp, UserApp>.Current();
+                //  var appInfo = EngineContext<IUserApp, UserApp>.Current();
+                var appInfo = EngineContext.Current.Resolve<IUserApp>();
                 //if (appInfo == null)
                 //{
                 //    throw new Exception("用户不存在");
