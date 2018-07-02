@@ -36,6 +36,9 @@
     <Reference Include="Enyim.Caching, Version=2.16.0.0, Culture=neutral, PublicKeyToken=cec98615db04012e, processorArchitecture=MSIL">
       <HintPath>..\packages\EnyimMemcached.2.16.0\lib\net35\Enyim.Caching.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -68,6 +71,7 @@
     <Compile Include="Core\Orderable.cs" />
     <Compile Include="Core\PagerModel\Pager.cs" />
     <Compile Include="Engine\AutofacRequestLifetime.cs" />
+    <Compile Include="Engine\AutoMapperProvider.cs" />
     <Compile Include="Engine\BaseTypeFinder.cs" />
     <Compile Include="Engine\ComponentLifeStyle.cs" />
     <Compile Include="Engine\ContainerManager.cs" />
@@ -85,6 +89,9 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ServiceRegister\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

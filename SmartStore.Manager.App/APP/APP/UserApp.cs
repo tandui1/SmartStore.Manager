@@ -1,4 +1,6 @@
-﻿using SmartStore.Manager.App.APP.IAPP;
+﻿using Infrastructure.Engine;
+using SmartStore.Manager.App.APP.IAPP;
+using SmartStore.Manager.Domain.Service;
 using SmartStore.Manager.Domain.Service.IService;
 using SmartStore.Manager.Dto;
 using System;
@@ -12,12 +14,17 @@ namespace SmartStore.Manager.App.APP.APP
    public class UserApp: IUserApp
     {
         private readonly IUserService _userService;
-        public UserApp(IUserService userService) {
+        public UserApp(IUserService userService)
+        {
             this._userService = userService;
+        }
+        public UserApp()
+        {
+
         }
         public UserDto GetUserByName(string name)
         {
-           return  this._userService.GetUserByName(name);
+            return _userService.GetUserByName(name);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Practices.Unity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,8 +14,9 @@ namespace Infrastructure.Engine
         public static IClass Current()
         {
             var container = new UnityContainer();
+          //  container.RegisterType<IClass, cbClass>();
             container.RegisterType(typeof(IClass), typeof(cbClass));
-            IClass ins = (IClass)container.Resolve(typeof(IClass));
+            IClass ins = container.Resolve<IClass>();
 
             return ins;
         }

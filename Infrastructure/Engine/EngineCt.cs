@@ -47,6 +47,8 @@ namespace Infrastructure.Engine
 
         public T Resolve<T>() where T : class
         {
+           // var a = new ContainerManager();
+             var a = _containerManager;
             return _containerManager.Resolve<T>();
         }
         public object Resolve(Type type)
